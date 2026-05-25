@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.logokit/brand-data",
+  "title": "LogoKit Brand & Company Data",
+  "description": "Company & brand data by domain or ticker/ISIN: industry, headcount, HQ, social, colors, logos.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/logo-kit/logokit-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.logokit.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer sk_pa_… — your LogoKit secret API key (Startup, Scale, or Enterprise plan). Publishable pk_* keys are not accepted.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
